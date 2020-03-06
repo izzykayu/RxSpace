@@ -10,7 +10,7 @@ def process(sentence):
 	sentence = re.sub("[0-9]", "d", sentence)
 	sentence = sentence.lower()
 	t_sentence = tweet_tokenizer.tokenize(sentence)
-	final = t_sentence.join(" ")
+	final = " ".join(t_sentence)
 	return final
 
 def load_data(file_to_add, text_col_name, delimiter=','):
