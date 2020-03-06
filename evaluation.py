@@ -2,6 +2,13 @@ import plac
 import sklearn.metrics as sklm
 import pandas as pd
 from pathlib import Path
+label_dispath = {
+    "A": 'potential abuse/misuse',
+    "C": 'non-abuse/-misuse consumption',
+    "M": 'merely mention the medication',
+    "U": 'unrelated'
+
+    }
 def convert_labels(val):
     val = val.strip(' ')
     return '__label__' + val
