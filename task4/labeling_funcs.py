@@ -45,14 +45,6 @@ def lf_contains_buying(x):
         return ABSTAIN
 
 @labeling_function()
-def lf_contains_seeking(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'looking for' in text or 'need' in text or 'seeking' in text or 'found' in text or 'find' in text or 'get' or 'want' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
 def lf_contains_my_fix(x):
     text = x.lower()
     if set(text.split()).intersection(all_drugs) and 'my fix' in text:
@@ -62,48 +54,9 @@ def lf_contains_my_fix(x):
 
 @labeling_function()
 def lf_contains_snort(x):
+    ########### THIS ONE NEEDS TO BE MODIFIED TO DISTINGUISH BETWEEN WHETHER THE SUBJECT SNORTING IS THE TWEETER OR SOMEONE ELSE BECAUSE IT ONLY APPLIES IF IT'S THE TWEETER ##############
     text = x.lower()
     if set(text.split()).intersection(all_drugs) and 'snort' in text or 'snorting' in text or 'snorted' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
-def lf_contains_wanting(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'wish i had' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
-def lf_contains_too_much(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'too much' in text or 'overdose' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
-def lf_contains_mixing(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'mix' in text or 'mixing' in text or 'mixed' in text or 'mixin' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
-def lf_contains_drug_and_other_substance(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'alcohol' in text or 'weed' in text or 'marijuana' in text:
-        return a
-    else:
-        return ABSTAIN
-
-@labeling_function()
-def lf_contains_popping(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'pop' in text or 'popped' in text or 'poppin' in text or 'popping' in text:
         return a
     else:
         return ABSTAIN
@@ -115,20 +68,3 @@ def lf_contains_do_a_line(x):
         return a
     else:
         return ABSTAIN
-
-@labeling_function()
-def lf_contains_steal(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'steal' in text or 'stole' in text or 'stolen' in text:
-        return a
-    else:
-        return ABSTAIN
-
-labeling_function()
-def lf_contains_(x):
-    text = x.lower()
-    if set(text.split()).intersection(all_drugs) and 'mix' in text or 'mixing' in text or 'mixed' in text or 'mixin' in text:
-        return a
-    else:
-        return ABSTAIN
-
