@@ -2,6 +2,7 @@ import plac
 import sklearn.metrics as sklm
 import pandas as pd
 from pathlib import Path
+
 label_dispath = {
     "A": 'potential abuse/misuse',
     "C": 'non-abuse/-misuse consumption',
@@ -9,13 +10,15 @@ label_dispath = {
     "U": 'unrelated'
 
     }
+
 def convert_labels(val):
     val = val.strip(' ')
     return '__label__' + val
 
 plac.annotations(true=('t','true labels', 'positional', Path),
                  preds=('p', 'predictions from model', 'positional', Path),
-                 label=('l', 'name of label', 'optional', str))
+                 label=('l', 'name of column where that contains the classifcation label for the training set', 'optional', str))
+
 def main(true, preds, label='class'):
     df = pd.read_csv(true)
     true_labels = df[label].map(convert_labels).values
