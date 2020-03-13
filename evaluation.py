@@ -8,7 +8,6 @@ label_dispath = {
     "C": 'non-abuse/-misuse consumption',
     "M": 'merely mention the medication',
     "U": 'unrelated'
-
     }
 
 def convert_labels(val):
@@ -26,5 +25,4 @@ def main(true, preds, label='class'):
     y_preds = y_preds[0].values
     print(sklm.classification_report(y_true=true_labels, y_pred=y_preds))
 
-if __name__ == '__main__':
     plac.call(main)
