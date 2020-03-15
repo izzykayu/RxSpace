@@ -19,9 +19,14 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * All deadlines, except for system predictions (see above), are 23:59 UTC (“anywhere on Earth”). <br>
 
 ## META
-Isabel Metzger <br> im1247@nyu.edu <br>
-Allison Black <br> <br>
-Rajat 
+* Isabel Metzger <br> im1247@nyu.edu <br>
+* Allison Black <br> <br>
+* Rajat Chandra <br> <br>
+* Rishi Bhargava <br> rishi.bhargava42@gmail.com <br>
+* Emir <br> emir.y.haskovic@gmail.com <br> 
+* Mark Rutledge <br> <br>
+* Natasha <br> <br>
+* Whitley <br> <br>
 
 
 
