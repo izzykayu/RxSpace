@@ -20,5 +20,9 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 
 ## META
 Isabel Metzger <br> im1247@nyu.edu <br>
+Allison Black <br> <br>
+Rajat 
+
+
 
 tags: data augmentation, snorkel labeling functions, elmo, cnns, scalability
