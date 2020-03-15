@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 fastText-0.9.1
+data-orig/*.csv
