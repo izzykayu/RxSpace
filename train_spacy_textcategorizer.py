@@ -5,7 +5,9 @@ Trains a baseline script for convolutional neural network text classifier using 
 
 be sure to run prepare-for-spacy-and-pytorch.py using a directory with the original train.csv and validation.csv file to an output dir (e./g., "data-spacy-pytorch-jsonl" is used in this case
 Usage: python train_spacy_textcategorizer.py <input_dir> <labels>
-e.g., python train_spacy_textcategorizer.py -i "data-spacy-pytorch-jsonl" -l "ABUSE,UNRELATED,
+e.g., python train_spacy_textcategorizer.py -i "data-spacy-pytorch-jsonl" -l "ABUSE,CONSUMPTION,MENTION,UNRELATED" -o "spacy-textcat-cnn" -t 10537
+# the script above uses all texts
+
 
 * Training: https://spacy.io/usage/training
 
@@ -31,7 +33,7 @@ import jsonlines
     n_iter=("Number of training iterations", "option", "n", int),
     init_tok2vec=("Pretrained tok2vec weights", "option", "t2v", Path),
 )
-def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION,UNRELATED", model=None, output_dir=None, n_iter=20, n_texts=2000, init_tok2vec=None):
+def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION,UNRELATED", model=None, output_dir=None, n_iter=100, n_texts=2000, init_tok2vec=None):
     if output_dir is not None:
         output_dir = Path(output_dir)
         if not output_dir.exists():
@@ -111,12 +113,9 @@ def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION
     example_dev_texts = dev_data[:10]
     for objs in example_dev_texts:
         test_text = objs[0]
-        test_cats = objs[1]
         doc = nlp(test_text)
         predicted_cat = get_top_cat(doc)
-        true_class = [k for k, v in test_cats.items() if v == True]
-        true_class = true_class[0]
-        print(f'TEXT:{test_text}\tPRED CLASS:{predicted_cat}\tTRUE CLASS:{true_class}')
+        print(f'TEXT: {test_text}\tPRED CLASS :{predicted_cat}')
 
     # test_text = "I lie about my anxiety so I can get prescriptionz for klonopin hahah"
     # doc = nlp(test_text)
@@ -126,7 +125,7 @@ def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION
         with nlp.use_params(optimizer.averages):
             nlp.to_disk(output_dir)
         print("Saved model to", output_dir)
-
+        test_text = "_u i got mine pulled out about 6 years ago and the doctor prescribed me oxycodone but i never had pain . i just got high lol"
         # test the saved model
         print("Loading from", output_dir)
         nlp2 = spacy.load(output_dir)
@@ -165,17 +164,7 @@ def load_data(input_dir, labels):
             dev_texts.append(text)
             dev_cats.append(labs)
 
-
-           # val_data.append(obj)
     return (train_texts, train_cats), (dev_texts, dev_cats)
-    # train_data = list(zip(train_texts, [{'cats': cats} for cats in train_cats]))
-    # print(train_data[0])
-    # random.shuffle(train_data)
-    # print(train_data[0])
-    # dev_data = list(zip(dev_texts,
-    #                       [{'cats': cats} for cats in dev_cats]))
-    #
-    # return train_data, dev_data
 
 
 
