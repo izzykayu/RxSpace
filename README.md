@@ -56,4 +56,25 @@ tags: data augmentation, snorkel labeling functions, elmo, cnns, scalability
    macro avg       0.71      0.60      0.63      2635
 weighted avg       0.70      0.71      0.69      2635
 
+
+              precision    recall  f1-score   support
+
+           a       0.19      0.08      0.11       448
+           c       0.28      0.23      0.25       730
+           m       0.52      0.69      0.59      1353
+           u       0.08      0.02      0.03       104
+
+    accuracy                           0.43      2635
+   macro avg       0.27      0.26      0.25      2635
+weighted avg       0.38      0.43      0.39      2635
+
+
+```
+#converting glove twitter vectors
+
+```bash
+python -m gensim.scripts.glove2word2vec --input "/Users/isabelmetzger/PycharmProjects/glove-twitter/glove.twitter.27B.100d.txt" --output glove.twitter.27B.100d.w2v.txt
+gzip glove.twitter.27B.100d.w2v.txt
+python -m spacy init-model en twitter-glove --vectors-loc glove.twitter.27B.100d.w2v.txt.gz
+
 ```

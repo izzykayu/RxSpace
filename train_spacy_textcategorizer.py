@@ -5,7 +5,7 @@ Trains a baseline script for convolutional neural network text classifier using 
 
 be sure to run prepare-for-spacy-and-pytorch.py using a directory with the original train.csv and validation.csv file to an output dir (e./g., "data-spacy-pytorch-jsonl" is used in this case
 Usage: python train_spacy_textcategorizer.py <input_dir> <labels>
-e.g., python train_spacy_textcategorizer.py -i "data-spacy-pytorch-jsonl" -l "ABUSE,CONSUMPTION,MENTION,UNRELATED" -o "spacy-textcat-cnn" -t 10537
+e.g., python train_spacy_textcategorizer.py -i "data-spacy-pytorch-jsonl" -l "ABUSE,CONSUMPTION,MENTION,UNRELATED" -t 10537 -m "twitter-glove" -t2v "weights/model100.bin" -o "spacy-cnn-t2v"
 # the script above uses all texts
 
 
@@ -89,7 +89,7 @@ def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION
                 textcat.model.tok2vec.from_bytes(file_.read())
         print("Training the model...")
         print("{:^5}\t{:^5}\t{:^5}\t{:^5}".format("LOSS", "P", "R", "F"))
-        batch_sizes = compounding(4.0, 32.0, 1.001)
+        batch_sizes = compounding(4.0, 64.0, 1.001)
         for i in range(n_iter):
             losses = {}
             # batch up the examples using spaCy's minibatch
@@ -99,7 +99,7 @@ def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION
                 texts, annotations = zip(*batch)
                 nlp.update(texts, annotations, sgd=optimizer, drop=0.2, losses=losses)
             with textcat.model.use_params(optimizer.averages):
-                scores = evaluate(nlp.tokenizer, textcat, dev_texts, dev_cats)
+                scores = evaluate_textcat(nlp.tokenizer, textcat, dev_texts, dev_cats)
             print(
                 "{0:.3f}\t{1:.3f}\t{2:.3f}\t{3:.3f}".format(  # print a simple table
                     losses["textcat"],
@@ -113,9 +113,10 @@ def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION
     example_dev_texts = dev_data[:10]
     for objs in example_dev_texts:
         test_text = objs[0]
+        test_cats = objs[1]
         doc = nlp(test_text)
         predicted_cat = get_top_cat(doc)
-        print(f'TEXT: {test_text}\tPRED CLASS :{predicted_cat}')
+        print(f'TEXT: {test_text}\tPRED CLASS: {predicted_cat}\nCLASSES: {test_cats}\n')
 
     # test_text = "I lie about my anxiety so I can get prescriptionz for klonopin hahah"
     # doc = nlp(test_text)
@@ -167,23 +168,16 @@ def load_data(input_dir, labels):
     return (train_texts, train_cats), (dev_texts, dev_cats)
 
 
-
-def evaluate(tokenizer, textcat, texts, cats):
+def evaluate_textcat(tokenizer, textcat, texts, cats):
     docs = (tokenizer(text) for text in texts)
-    tp = 0.0  # True positives
-    fp = 1e-8  # False positives
-    fn = 1e-8  # False negatives
-    tn = 0.0  # True negatives
+    tp = 1e-8
+    fp = 1e-8
+    tn = 1e-8
+    fn = 1e-8
     for i, doc in enumerate(textcat.pipe(docs)):
         gold = cats[i]
         for label, score in doc.cats.items():
             if label not in gold:
-                continue
-            if label == 'CONSUMPTION':
-                continue
-            if label == 'MENTION':
-                continue
-            if label == 'UNRELATED':
                 continue
             if score >= 0.5 and gold[label] >= 0.5:
                 tp += 1.0
@@ -195,10 +189,7 @@ def evaluate(tokenizer, textcat, texts, cats):
                 fn += 1
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
-    if (precision + recall) == 0:
-        f_score = 0.0
-    else:
-        f_score = 2 * (precision * recall) / (precision + recall)
+    f_score = 2 * (precision * recall) / (precision + recall)
     return {"textcat_p": precision, "textcat_r": recall, "textcat_f": f_score}
 
 
