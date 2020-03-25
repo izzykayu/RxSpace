@@ -13,7 +13,7 @@ from spacy.language import Language
 #from spacy.vectors import Vectors
 
 @plac.annotations(
-    vectors_loc=("Path to .vec file", "positional", None, str),
+    vectors_loc=("Path to fasttext vec .vec file", "positional", None, str),
     lang=(
         "Optional language ID. If not set, blank Language() will be used.",
         "positional",

@@ -7,7 +7,7 @@
      "token_indexers": {
       "bert": {
           "type": "bert-pretrained",
-          "pretrained_model": "/Users/isabelmetzger/PycharmProjects/scibert/scripts/scibert_scivocab_uncased/vocab.txt",
+          "pretrained_model": "scibert_scivocab_uncased/vocab.txt",
           "do_lowercase": false,
           "use_starting_offsets": true
       }
@@ -28,7 +28,7 @@
         "token_embedders": {
             "bert": {
                 "type": "bert-pretrained",
-                "pretrained_model": "/Users/isabelmetzger/PycharmProjects/scibert/scripts/scibert_scivocab_uncased/weights.tar.gz"
+                "pretrained_model": "scibert_scivocab_uncased/weights.tar.gz"
             }
         }
     },
@@ -63,6 +63,6 @@
     "num_serialized_models_to_keep": 3,
     "num_epochs": 70,
     "patience": 10,
-    "cuda_device": 0
+    "cuda_device": -1
   }
 }

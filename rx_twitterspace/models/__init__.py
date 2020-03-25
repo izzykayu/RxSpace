@@ -1,5 +1,4 @@
 from rx_twitterspace.models.text_classifier import TextClassifier
-from rx_twitterspace.models.newsgroups_classifier import Fetch20NewsgroupsClassifier
-from rx_twitterspace.models.academic_paper_classifier import AcademicPaperClassifier
+from rx_twitterspace.models.groups_classifier import TweetClassifier
 from rx_twitterspace.models.sst_classifier import LstmClassifier
 from rx_twitterspace.models.bert_text_classifier import BertTextClassifier

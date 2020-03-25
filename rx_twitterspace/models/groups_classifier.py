@@ -5,6 +5,7 @@ from overrides import overrides
 import torch
 import torch.nn.functional as F
 
+from allennlp.common import Params
 from allennlp.common.checks import ConfigurationError
 from allennlp.data import Vocabulary
 from allennlp.modules import FeedForward, Seq2VecEncoder, TextFieldEmbedder
@@ -14,27 +15,23 @@ from allennlp.nn import util
 from allennlp.training.metrics import CategoricalAccuracy
 
 
-@Model.register("paper_classifier")
-class AcademicPaperClassifier(Model):
+@Model.register("tweet_classifier")
+class TweetClassifier(Model):
     """
-    This ``Model`` performs text classification for an academic paper.  We assume we're given a
-    title and an abstract, and we predict some output label.
-
-    The basic model structure: we'll embed the title and the abstract, and encode each of them with
-    separate Seq2VecEncoders, getting a single vector representing the content of each.  We'll then
-    concatenate those two vectors, and pass the result through a feedforward network, the output of
+    This ``Model`` performs text classification for a newsgroup text.  We assume we're given a
+    text and we predict some output label.
+    The basic model structure: we'll embed the text and encode it with
+    a Seq2VecEncoder, getting a single vector representing the content.  We'll then
+    the result through a feedforward network, the output of
     which we'll use as our scores for each label.
-
     Parameters
     ----------
     vocab : ``Vocabulary``, required
         A Vocabulary, required in order to compute sizes for input/output projections.
-    text_field_embedder : ``TextFieldEmbedder``, required
+    model_text_field_embedder : ``TextFieldEmbedder``, required
         Used to embed the ``tokens`` ``TextField`` we get as input to the model.
-    title_encoder : ``Seq2VecEncoder``
-        The encoder that we will use to convert the title to a vector.
-    abstract_encoder : ``Seq2VecEncoder``
-        The encoder that we will use to convert the abstract to a vector.
+    internal_text_encoder : ``Seq2VecEncoder``
+        The encoder that we will use to convert the input text to a vector.
     classifier_feedforward : ``FeedForward``
     initializer : ``InitializerApplicator``, optional (default=``InitializerApplicator()``)
         Used to initialize the model parameters.
@@ -42,30 +39,23 @@ class AcademicPaperClassifier(Model):
         If provided, will be used to calculate the regularization penalty during training.
     """
     def __init__(self, vocab: Vocabulary,
-                 text_field_embedder: TextFieldEmbedder,
-                 title_encoder: Seq2VecEncoder,
-                 abstract_encoder: Seq2VecEncoder,
+                 model_text_field_embedder: TextFieldEmbedder,
+                 internal_text_encoder: Seq2VecEncoder,
                  classifier_feedforward: FeedForward,
                  initializer: InitializerApplicator = InitializerApplicator(),
                  regularizer: Optional[RegularizerApplicator] = None) -> None:
-        super(AcademicPaperClassifier, self).__init__(vocab, regularizer)
+        super(TweetClassifier, self).__init__(vocab, regularizer)
 
-        self.text_field_embedder = text_field_embedder
+        self.model_text_field_embedder = model_text_field_embedder
         self.num_classes = self.vocab.get_vocab_size("labels")
-        self.title_encoder = title_encoder
-        self.abstract_encoder = abstract_encoder
+        self.internal_text_encoder = internal_text_encoder
         self.classifier_feedforward = classifier_feedforward
 
-        if text_field_embedder.get_output_dim() != title_encoder.get_input_dim():
-            raise ConfigurationError("The output dimension of the text_field_embedder must match the "
+        if model_text_field_embedder.get_output_dim() != internal_text_encoder.get_input_dim():
+            raise ConfigurationError("The output dimension of the model_text_field_embedder must match the "
                                      "input dimension of the title_encoder. Found {} and {}, "
-                                     "respectively.".format(text_field_embedder.get_output_dim(),
-                                                            title_encoder.get_input_dim()))
-        if text_field_embedder.get_output_dim() != abstract_encoder.get_input_dim():
-            raise ConfigurationError("The output dimension of the text_field_embedder must match the "
-                                     "input dimension of the abstract_encoder. Found {} and {}, "
-                                     "respectively.".format(text_field_embedder.get_output_dim(),
-                                                            abstract_encoder.get_input_dim()))
+                                     "respectively.".format(model_text_field_embedder.get_output_dim(),
+                                                            internal_text_encoder.get_input_dim()))
         self.metrics = {
                 "accuracy": CategoricalAccuracy(),
                 "accuracy3": CategoricalAccuracy(top_k=3)
@@ -76,20 +66,16 @@ class AcademicPaperClassifier(Model):
 
     @overrides
     def forward(self,  # type: ignore
-                title: Dict[str, torch.LongTensor],
-                abstract: Dict[str, torch.LongTensor],
+                text: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
         # pylint: disable=arguments-differ
         """
         Parameters
         ----------
-        title : Dict[str, Variable], required
-            The output of ``TextField.as_array()``.
-        abstract : Dict[str, Variable], required
+        input_text : Dict[str, Variable], required
             The output of ``TextField.as_array()``.
         label : Variable, optional (default = None)
             A variable representing the label for each instance in the batch.
-
         Returns
         -------
         An output dictionary consisting of:
@@ -99,20 +85,16 @@ class AcademicPaperClassifier(Model):
         loss : torch.FloatTensor, optional
             A scalar loss to be optimised.
         """
-        embedded_title = self.text_field_embedder(title)
-        title_mask = util.get_text_field_mask(title)
-        encoded_title = self.title_encoder(embedded_title, title_mask)
+        embedded_text = self.model_text_field_embedder(text)
+        text_mask = util.get_text_field_mask(text)
+        encoded_text = self.internal_text_encoder(embedded_text, text_mask)
 
-        embedded_abstract = self.text_field_embedder(abstract)
-        abstract_mask = util.get_text_field_mask(abstract)
-        encoded_abstract = self.abstract_encoder(embedded_abstract, abstract_mask)
-
-        logits = self.classifier_feedforward(torch.cat([encoded_title, encoded_abstract], dim=-1))
+        logits = self.classifier_feedforward(encoded_text)
         output_dict = {'logits': logits}
         if label is not None:
-            loss = self.loss(logits, label)
+            loss = self.loss(logits, label.squeeze(-1))
             for metric in self.metrics.values():
-                metric(logits, label)
+                metric(logits, label.squeeze(-1))
             output_dict["loss"] = loss
 
         return output_dict
@@ -123,7 +105,7 @@ class AcademicPaperClassifier(Model):
         Does a simple argmax over the class probabilities, converts indices to string labels, and
         adds a ``"label"`` key to the dictionary with the result.
         """
-        class_probabilities = F.softmax(output_dict['logits'], dim=-1)
+        class_probabilities = F.softmax(output_dict['logits'])
         output_dict['class_probabilities'] = class_probabilities
 
         predictions = class_probabilities.cpu().data.numpy()
@@ -136,3 +118,20 @@ class AcademicPaperClassifier(Model):
     @overrides
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
         return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
+
+    @classmethod
+    def from_params(cls, vocab: Vocabulary, params: Params) -> 'TweetClassifier':
+        embedder_params = params.pop("model_text_field_embedder")
+        model_text_field_embedder = TextFieldEmbedder.from_params(embedder_params, vocab=vocab)
+        internal_text_encoder = Seq2VecEncoder.from_params(params.pop("internal_text_encoder"))
+        classifier_feedforward = FeedForward.from_params(params.pop("classifier_feedforward"))
+
+        initializer = InitializerApplicator.from_params(params.pop('initializer', []))
+        regularizer = RegularizerApplicator.from_params(params.pop('regularizer', []))
+
+        return cls(vocab=vocab,
+                   model_text_field_embedder=model_text_field_embedder,
+                   internal_text_encoder=internal_text_encoder,
+                   classifier_feedforward=classifier_feedforward,
+                   initializer=initializer,
+                   regularizer=regularizer)

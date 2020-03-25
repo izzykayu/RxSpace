@@ -60,7 +60,8 @@ TRAIN_DATA = make_all("../bc2gm-corpus/standoff/test/*.txt", outpath= "./corpus/
 
 @plac.annotations(
     model=("model name ", "option", "m", str),
-  # input_file=("input spacy file", "option", "i", str),
+    input_file=("input spacy file", "option", "i", Path),
+    labels=("String with labels for text classification", "po"),
     output_dir=("Optional output directory to save model", "option", "o", Path),
     n_iter=("Number of training iterations", "option", "n", int),
     )
