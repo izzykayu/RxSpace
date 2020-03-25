@@ -2,7 +2,7 @@
 * [General Reading Materials and Books](#general-reading-materials-and-books)
 * [Word Embeddings](#word-embeddings)
 * [Language Modeling](#language-modeling)
-* [Infersent](#infersent)
+* [Sentence Understanding](#sentence-understanding)
 * [General Text Classification](#general-text-classification)
 * [Document Classification with RNNs](#document-classification-with-rnns)
 * [Domain Specific Papers](#domain-specific-papers)
@@ -28,14 +28,13 @@
      * [word2vec paper - Distributed Representations of words and phrases and their Compositionality by Mikolov et al.](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
      * [word2vec code implementation](https://code.google.com/archive/p/word2vec/)
      * [word 2 vec explainer blog](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
-     
     * [Natural Language Processing (almost) from Scratch by Collobert et al.](http://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)
     * [From Frequency to Meaning: Vector Space Models of Semantics](http://www.jair.org/media/2934/live-2934-4846-jair.pdf)
     * [GloVe: Global Vectors for Word Representation](http://www.aclweb.org/anthology/D14-1162)
     * [glove explainer blog](https://blog.acolyer.org/2016/04/22/glove-global-vectors-for-word-representation/)
 
 ## Language Modeling
-    * [Ch. 9]
+    * [Ch. 9, Goldberg]()
     * [A neural probabilistic language model by Bengio et al.]()
     * [N-Grams by Jurafsky and Martin]()
     * [RNN based language model by Mikolov]()
@@ -43,31 +42,31 @@
     * Ch 17 [Goldberg](http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037)
     * Sec. 18.8 of [An introduction to machine translation by W. John Hutchins and Harold L. Somers ](http://www.hutchinsweb.me.uk/IntroMT-TOC.htm)
     * [Warren Weaver memorandum, July 1949](https://en.wikipedia.org/wiki/Warren_Weaver#The_.22Translation.22_memorandum)
-    * [Aetherial Symbols by Geoff Hinton]
-    * [The Lighthill Debate (1973)]
+    * [Aetherial Symbols by Geoff Hinton](https://drive.google.com/file/d/0B8i61jl8OE3XdHRCSkV1VFNqTWc/view)
+    * [The Lighthill Debate (1973)](https://www.youtube.com/watch?v=yReDbeY7ZMU)
     * [Google’s Neural MT system](https://research.googleblog.com/2016/09/a-neural-network-for-machine.html)
-    * (rare word problem): [Luong et al. ‘15a]()
-    * (attention): [Bahdanau et al. ‘15, Luong et al. ‘15b]()
+    * rare word problem - Luong et al. 15](https://arxiv.org/abs/1410.8206)
+    * attention - [Bahdanau et al. ‘15](https://arxiv.org/abs/1409.0473), Luong et al. ‘15](http://www.aclweb.org/anthology/D15-1166)
+    * ElMo - [Deep Contextualized Word Represenations](https://arxiv.org/abs/1802.05365)
+    * [PyTorch implmentation of elmo](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md)
+    * ULimFit - [Universal Language Model Fine-tuning for Text Classification by Jeremy Howard and Sebastian Ruder](https://arxiv.org/abs/1801.06146)
 
 ## Sentence understanding and natural language inference 
-### Sentence and Language Model Based Word Embeddings
-- ElMo - [Deep Contextualized Word Represenations](https://arxiv.org/abs/1802.05365) - [PyTorch implmentation](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) - [TF Implementation](https://github.com/allenai/bilm-tf)
-- ULimFit - [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146) by Jeremy Howard and Sebastian Ruder
 - InferSent - [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364) by facebook
 - CoVe - [Learned in Translation: Contextualized Word Vectors](https://arxiv.org/abs/1708.00107)
-- Pargraph vectors - from [Distributed Representations of Sentences and Documents](https://cs.stanford.edu/~quocle/paragraph_vector.pdf). See [doc2vec tutorial at gensim](https://rare-technologies.com/doc2vec-tutorial/)
+- Pargraph vectors - from [Distributed Representations of Sentences and Documents](https://cs.stanford.edu/~quocle/paragraph_vector.pdf). See [doc2vec tutorial with gensim](https://rare-technologies.com/doc2vec-tutorial/)
 - [sense2vec](https://arxiv.org/abs/1511.06388) - on word sense disambiguation
-- [Skip Thought Vectors](https://arxiv.org/abs/1506.06726) - word representation method
+- [Skip Thought Vectors by Keros et al.](https://arxiv.org/abs/1506.06726) - word representation method
 - [Adaptive skip-gram](https://arxiv.org/abs/1502.07257) - similar approach, with adaptive properties
-- [Sequence to Sequence Learning](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf) - word vectors for machine translation
-* Infersent
-    * [Bowman et al. 2015](http://nlp.stanford.edu/pubs/snli_paper.pdf)
+- [Sequence to Sequence Learning](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf) 
+    * [SNLI - Bowman et al. 2015](http://nlp.stanford.edu/pubs/snli_paper.pdf)
     * [Conneau et al. 2017]()
-    * [Skip-thought vectors by Kiros et al.]()
 
+    
 ## Larger-context natural language understanding
     * [Hermann et al. 2015](https://arxiv.org/pdf/1506.03340.pdf)
     * [Chen et al. 2016](https://arxiv.org/pdf/1606.02858v2.pdf)
+
 
 ## Document Classification 
     * [Understanding LSTM Networks by Olah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
