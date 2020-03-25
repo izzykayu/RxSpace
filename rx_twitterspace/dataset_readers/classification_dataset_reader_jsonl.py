@@ -15,8 +15,8 @@ from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 
-@DatasetReader.register("classification_dataset_reader")
-class ClassificationDatasetReader(DatasetReader):
+@DatasetReader.register("classification_jsonl_dataset_reader")
+class ClassificationJSONLDatasetReader(DatasetReader):
     """
     Text classification data reader
 
@@ -40,7 +40,7 @@ class ClassificationDatasetReader(DatasetReader):
                 yield self.text_to_instance(
                     text=json_object.get('text'),
                     label=json_object.get('label'),
-                    metadata=json_object.get('metadata')
+                   metadata=None #json_object.get('metadata')
                 )
 
     @overrides
@@ -50,11 +50,9 @@ class ClassificationDatasetReader(DatasetReader):
                          metadata: Any = None) -> Instance:  # type: ignore
         text_tokens = self._tokenizer.tokenize(text)
         fields = {
-            'text': TextField(text_tokens, self._token_indexers),
+            'tokens': TextField(text_tokens, self._token_indexers),
         }
         if label is not None:
             fields['label'] = LabelField(label)
 
-        if metadata:
-            fields['metadata'] = MetadataField(metadata)
         return Instance(fields)

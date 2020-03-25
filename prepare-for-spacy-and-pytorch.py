@@ -33,7 +33,8 @@ plac.annotations(
     preprocess=("boolean", "option", "p", bool),
                  )
 
-def main(input_dir, output_dir, text_col='unprocessed_text',label_col='class', meta_col="tweetid", preprocess=True):
+def main(input_dir, output_dir, text_col='unprocessed_text',
+         label_col='class', meta_col="tweetid", preprocess=False):
     output_dir = Path(output_dir)
     if not output_dir.exists():
         output_dir.mkdir()
@@ -80,6 +81,8 @@ def main(input_dir, output_dir, text_col='unprocessed_text',label_col='class', m
             for row in tweetreader:
                 cntv += 1
                 text = row[text_col]
+                if preprocess is True:
+                    text = preprocess_text(text)
                 tweetid = row[meta_col]
                 label = row[label_col]
                 new_label = class_dispatch.get(label)

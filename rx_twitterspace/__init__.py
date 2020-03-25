@@ -1,3 +1,3 @@
-import rx_twitterspace.dataset_readers.classification_dataset_reader
-import rx_twitterspace.models.text_classifier
+from rx_twitterspace.dataset_readers import *
+from rx_twitterspace.models import *
 
