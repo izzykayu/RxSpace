@@ -1,6 +1,5 @@
 ## SM4H - Team **RxSpace** :star: !
 
-
 ## Table of Contents
 * [Competition Details](#competition-details)
 * [Team Members](#team) :sparkles: :sparkles: :email:
@@ -18,7 +17,7 @@
 
 
 ## Competition Details
-*This repository contains code for tackling Task 4 of the SMM2020 
+*This repository contains code for tackling Task 4 of the SMM2020*
 
 The Social Media Mining for Health Applications (#SMM4H) Shared Task involves natural language processing (NLP) challenges of using social media data for health research, including informal, colloquial expressions and misspellings of clinical concepts, noise, data sparsity, ambiguity, and multilingual posts. For each of the five tasks below, participating teams will be provided with a set of annotated tweets for developing systems, followed by a three-day window during which they will run their systems on unlabeled test data and upload the predictions of their systems to CodaLab. Informlsation about registration, data access, paper submissions, and presentations can be found below.
 <br>
@@ -53,41 +52,43 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * *Our approach can be broken up into 3 main sections: preprocessing, model architectures, and Ensemble*
 * Pre-processing:
     *tokenization + using pre-trained embeddings/ creating our own pre-trained word representations*
-* Word Embeddings:
-   * Glove (Pennington et al., 2014) , Word2Vec (Mikolov et al., 2013), fasText (Bojanowski et al., 2016):
-        * params:
-            * dim: 50, 100, 200, 300
+    * Word Embeddings:
+        * Glove (Pennington et al., 2014) , Word2Vec (Mikolov et al., 2013), fasText (Bojanowski et al., 2016):
+            * params:
+                * dim: 50, 100, 200, 300
 
                     
-    * Language Model: Elmo (Perters et al., 2018), Bert , sciBert:
-       * params: default
-  * Model Architectures:
-     * fasttext baseline
-     * allennlp scibert text classifier
-     * cnn text classifiers
+        *  Language Model: Elmo (Perters et al., 2018), Bert , sciBert:
+            *     params: default
+    * Model Architectures:
+        * fasttext baseline
+        * allennlp scibert text classifier
+        * cnn text classifiers
      
-     * train multiple models based on different training-set/val-set, different embeddings, different features, and even totally different architectures
- * we also train with different data-splits
- * *for all splits not using the originally provided train and dev set, we stratify by class
- e.g., 
- * Data split 1:
-    * *utilizing split provided from SMM4H*
-    * Train: orig train.csv (N = 10,537)
-    * Dev: orig validation.csv (N =2,636)
- * Data split 2:
-   * using an 70% | 30% split
-   * Train:
-   * Dev: 
-  * Data split 3:
-  * using a holdout from the dev set for 15%
-  * Train: 65%
-  * Dev:  20%
-  * Hold-out:  15%, 
-       * *Hold-out is used to tune the thresholds*
+        * train multiple models based on different training-set/val-set, different embeddings, different features, and even totally different architectures
+    * we also train with different data-splits
+    * *for all splits not using the originally provided train and dev set, we stratify by class e.g., 
+        * Data split 1:
+            * *utilizing split provided from SMM4H*
+            * Train: orig train.csv (N = 10,537)
+        * Dev: orig validation.csv (N =2,636)
+    * Data split 2:
+        * using an 70% | 30% split
+        * Train:
+        * Dev: 
+     * Data split 3:
+        * using a holdout from the dev set for 15%
+        * Train: 65%
+        * Dev:  20%
+        * Hold-out:  15%, 
+       *     *Hold-out is used to tune the thresholds*
+  * Ensemble
   * Voting:
-  * Models trined on different splits with weights according to dev set
-  * baseline threshold = 0.5
-  * fine-tune threshold according to the hold-out set
+    * Models trined on different splits with weights according to dev set
+    * validation metric fine tuned for includes overall_f1 and abuse_f1
+    * fixed threshold = 0.5
+    * fine-tune threshold according to the hold-out set for unfixed thresshold
+    * weight models according to best class f1 on validation
 
 
 ## Requirements
@@ -206,7 +207,8 @@ We created word embeddings using health social media posts from twitter and othe
 ### Labeling Functions
 * We used the snorkel framework for two major tasks: labeling Fxns and data augmentation
 * labeling function creation [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/snorkel.ipynb)
-# TODO: add link for data augmentation
+
+##TODO: add link for data augmentation
 * data augmentation [notebook]()
 
 
@@ -341,6 +343,8 @@ weighted avg       0.70      0.71      0.69      2635
     * DrugBank
     * UMLS
 * Creating more labeling fxns
+* Incorporating linguistic features, e.g., wordshape and POS
+
 
 ## Tags
 * data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability
