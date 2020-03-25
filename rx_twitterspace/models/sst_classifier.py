@@ -1,11 +1,8 @@
 from typing import Dict
-
+# to use as example LSTM
 import numpy as np
 import torch
 import torch.optim as optim
-from allennlp.data.dataset_readers.stanford_sentiment_tree_bank import \
-    StanfordSentimentTreeBankDatasetReader
-from allennlp.data.iterators import BucketIterator
 from allennlp.data.vocabulary import Vocabulary
 from allennlp.models import Model
 from allennlp.modules.seq2vec_encoders import Seq2VecEncoder, PytorchSeq2VecWrapper
@@ -80,56 +77,3 @@ class LstmClassifier(Model):
                 'precision': precision,
                 'recall': recall,
                 'f1_measure': f1_measure}
-
-
-def main():
-    reader = StanfordSentimentTreeBankDatasetReader()
-
-    train_dataset = reader.read('data/stanfordSentimentTreebank/trees/train.txt')
-    dev_dataset = reader.read('data/stanfordSentimentTreebank/trees/dev.txt')
-
-    # You can optionally specify the minimum count of tokens/labels.
-    # `min_count={'tokens':3}` here means that any tokens that appear less than three times
-    # will be ignored and not included in the vocabulary.
-    vocab = Vocabulary.from_instances(train_dataset + dev_dataset,
-                                      min_count={'tokens': 3})
-
-    token_embedding = Embedding(num_embeddings=vocab.get_vocab_size('tokens'),
-                                embedding_dim=EMBEDDING_DIM)
-
-    # BasicTextFieldEmbedder takes a dict - we need an embedding just for tokens,
-    # not for labels, which are used as-is as the "answer" of the sentence classification
-    word_embeddings = BasicTextFieldEmbedder({"tokens": token_embedding})
-
-    # Seq2VecEncoder is a neural network abstraction that takes a sequence of something
-    # (usually a sequence of embedded word vectors), processes it, and returns a single
-    # vector. Oftentimes this is an RNN-based architecture (e.g., LSTM or GRU), but
-    # AllenNLP also supports CNNs and other simple architectures (for example,
-    # just averaging over the input vectors).
-    encoder = PytorchSeq2VecWrapper(
-        torch.nn.LSTM(EMBEDDING_DIM, HIDDEN_DIM, batch_first=True))
-
-    model = LstmClassifier(word_embeddings, encoder, vocab)
-    optimizer = optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-5)
-
-    iterator = BucketIterator(batch_size=32, sorting_keys=[("tokens", "num_tokens")])
-
-    iterator.index_with(vocab)
-
-    trainer = Trainer(model=model,
-                      optimizer=optimizer,
-                      iterator=iterator,
-                      train_dataset=train_dataset,
-                      validation_dataset=dev_dataset,
-                      patience=10,
-                      num_epochs=20)
-    trainer.train()
-
-    predictor = SentenceClassifierPredictor(model, dataset_reader=reader)
-    logits = predictor.predict('This is the best movie ever!')['logits']
-    label_id = np.argmax(logits)
-
-    print(model.vocab.get_token_from_index(label_id, 'labels'))
-
-if __name__ == '__main__':
-    main()

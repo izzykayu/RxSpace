@@ -133,3 +133,4 @@ data-orig/*.csv
 *.gz
 *.jsonl
 data-fasttext/
+docs/*.zip
