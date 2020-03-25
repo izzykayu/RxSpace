@@ -1,7 +1,16 @@
 """
 Usage: eval-official.py <gt_pth> <pred_pth>
-takes in the ground truth (e.g., tweetid, class,
+takes in the ground truth (e.g., tweetid, class)
+usage: eval-official.py [-h] [gt_pth] [pred_pth] [truth_label] [pred_label]
 
+positional arguments:
+  gt_pth       [data-orig/validation.csv]
+  pred_pth     [preds/preds-validation-fasttext-twitter-model.csv]
+  truth_label  [class]
+  pred_label   [Class]
+
+optional arguments:
+  -h, --help   show this help message and exit
 
 """
 import sklearn.metrics as sklm
@@ -9,14 +18,15 @@ import pandas as pd
 import plac
 from pathlib import Path
 
-def clean_val(val):
-    return val.strip(' ')
 
-plac.annotations(gt_pth=("ground truth path to csv file - must have columns tweetid and class", "positional", "t", Path),
-                 pred_pth=("prediction classes csv file - mustve have columns tweetid and Class", "positional", "p", Path),
+plac.annotations(gt_pth=("ground truth path to csv file - must have columns tweetid and class", "option", "gt", Path),
+                 pred_pth=("prediction classes csv file - mustve have columns tweetid and Class","option", "p", Path),
+                 truth_label=("column name for ground truth - e.g., class",  "option", "l",  str),
+                 pred_label=("column name for prediction.csv predicted class column name, e.g., Class", "option", "pl", str),
                  )
 
-def main(gt_pth, pred_pth):
+def main(gt_pth='data-orig/validation.csv',
+         pred_pth='preds/preds-validation-fasttext-twitter-model.csv', truth_label='class', pred_label='Class'):
     truth_df = pd.read_csv(gt_pth)
     tweet_ids_truths = truth_df['tweetid']
     tweet_ids_truths = tweet_ids_truths.tolist()
@@ -32,9 +42,9 @@ def main(gt_pth, pred_pth):
     if yes is False:
         print(f'are you sure you put in the correct paths?')
 
-    truths = truth_df['class'].map(clean_val)
+    truths = truth_df[truth_label].map(str.strip)
     truths = truths.tolist()
-    preds = pred_df['Class']
+    preds = pred_df[pred_label].map(str.strip)
     preds = preds.tolist()
     print(sklm.classification_report(y_true=truths, y_pred=preds))
 
