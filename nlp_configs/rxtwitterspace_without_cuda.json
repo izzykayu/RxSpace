@@ -6,7 +6,7 @@
   "test_data_path": "data-classification-jsonl/validation.jsonl",
   "evaluate_on_test": true,
   "model": {
-    "type": "20newsgroups_classifier",
+    "type": "groups_classifier",
     "model_text_field_embedder": {
       "tokens": {
         "type": "embedding",

@@ -1,19 +1,20 @@
-## SM4H - Team **RxSpace**!
+## SM4H - Team **RxSpace** :star: !
 
 
 ## Table of Contents
 * [Competition Details](#competition-details)
-* [Team Members](#team)
-* [Our Approach](#our-approach)
-* [Text Corpora](#text-corpora)
+* [Team Members](#team) :sparkles: :sparkles: :email:
+* [Our Approach](#our-approach) :bookmark:
 * [Requirements](#requirements)
-* [Repo Setup](#repo-setup)
-* [Word Embeddings](#embeddings)
+* [Repo Layout](#repo-layout)
+* [Text Corpora](#text-corpora) :books: 
+* [Embeddings](#embeddings)
 * [Snorkel](#snorkel)
 * [Model Training](#model-training)
-* [Evaluation](#evaluation)
+* [Evaluation](#evaluation) :chart_with_upwards_trend:
 * [References](#references)
-* [Tags](#tags)
+* [Tags](#tags) 
+* [Future Work](#future-work) :crystal_ball:	
 
 
 ## Competition Details
@@ -49,14 +50,74 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * Whitley Yi - wmcadenhead@gmail.com <br>
 
 ## Our Approach
-* 
+* *Our approach can be broken up into 3 main sections: preprocessing, model architectures, and Ensemble*
+* Pre-processing:
+    *tokenization + using pre-trained embeddings/ creating our own pre-trained word representations*
+* Word Embeddings:
+   * Glove (Pennington et al., 2014) , Word2Vec (Mikolov et al., 2013), fasText (Bojanowski et al., 2016):
+        * params:
+            * dim: 50, 100, 200, 300
+
+                    
+    * Language Model: Elmo (Perters et al., 2018), Bert , sciBert:
+       * params: default
+  * Model Architectures:
+     * fasttext baseline
+     * allennlp scibert text classifier
+     * cnn text classifiers
+     
+     * train multiple models based on different training-set/val-set, different embeddings, different features, and even totally different architectures
+ * we also train with different data-splits
+ * *for all splits not using the originally provided train and dev set, we stratify by class
+ e.g., 
+ * Data split 1:
+    * *utilizing split provided from SMM4H*
+    * Train: orig train.csv (N = 10,537)
+    * Dev: orig validation.csv (N =2,636)
+ * Data split 2:
+   * using an 70% | 30% split
+   * Train:
+   * Dev: 
+  * Data split 3:
+  * using a holdout from the dev set for 15%
+  * Train: 65%
+  * Dev:  20%
+  * Hold-out:  15%, 
+       * *Hold-out is used to tune the thresholds*
+  * Voting:
+  * Models trined on different splits with weights according to dev set
+  * baseline threshold = 0.5
+  * fine-tune threshold according to the hold-out set
+
+
+## Requirements
+* Important packages/frameworks utilized include [spacy](https://github.com/explosion/spaCy), [fastText](https://github.com/facebookresearch/fastText), [ekphrasis](https://github.com/cbaziotis/ekphrasis), [allennlp](https://github.com/allenai/allennlp), [PyTorch](https://github.com/pytorch/pytorch), [snorkel](https://github.com/snorkel-team/snorkel/)
+* To use the allennlp configs (nlp_cofigs/text_classification.json) with pre-trained scibert , which were downloaded with commands below
+```bash
+wget https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/pytorch_models/scibert_scivocab_uncased.tar
+tar -xvf scibert_scivocab_uncased.tar
+```
+* Exact requirements can be found in the requirements.txt file
+* For specific processed done in jupyter notebooks, please find the packages listed in the beginning cells of each notebook
+
+
+## Repo Layout
+```
+* notebooks - jupyter notebooks including notebooks that contain important steps including embedding preprocessing, preprocessing for our allennlp models, snorkel labeling fxns and evaluation/exploratory analysis, and our baseline fasttext model (preprocessing, training, and saving): process-emb.ipynb, preprocessing-jsonl.ipynb, snorkel.ipynb, fasttext-supervised-model.ipynb
+* rx_twitterspace - allennlp library with our dataset loaders, predictors, and models
+* nlp_configs - allennlp model experiment configurations
+* preds - directory with predictions
+* data-orig - directory with original raw data as provided from the SMM4H official task
+* docs - more documentation (md and html files)
+* saved-models - directory where saved models are
+* preproc - bash scripts with import setup and pre-processing bash scripts such as converting fasttext embeddings for spacy and for compiling fasttext library
+```
 
 ## Text Corpora
 ### Supervised Learning
 * Original train/validation split:
    * We use the train.csv, validation.csv as provided from our competition
     train size = 10537 samples
-
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -139,37 +200,111 @@ We created word embeddings using health social media posts from twitter and othe
 |  Wikipedia |  |  | 
 | | | |
 
-## Requirements
-* Important packages/frameworks utilized include [spacy](https://github.com/explosion/spaCy), [fastText](https://github.com/facebookresearch/fastText), [ekphrasis](https://github.com/cbaziotis/ekphrasis), [allennlp](https://github.com/allenai/allennlp), [PyTorch](https://github.com/pytorch/pytorch), [snorkel](https://github.com/snorkel-team/snorkel/)
-* To use the allennlp configs (nlp_cofigs/text_classification.json) with pre-trained scibert embeddings, which were downloaded as below 
-```bash
-wget https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/pytorch_models/scibert_scivocab_uncased.tar
-tar -xvf scibert_scivocab_uncased.tar
-```
-* Exact requirements can be found in the requirements.txt file
-* For specific processed done in jupyter notebooks, please find the packages listed in the beginning cells of each notebook
-
 ## Embeddings
 
+## Snorkel
+### Labeling Functions
+* We used the snorkel framework for two major tasks: labeling Fxns and data augmentation
+* labeling function creation [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/snorkel.ipynb)
+# TODO: add link for data augmentation
+* data augmentation [notebook]()
 
-## Repo Layout
-```
-* rx_twitterspace
-* nlp_configs
-* preds
-* data-orig
-* docs
-* saved-models
-```
 
 ## Model Training
 * baseline fastText supervised classifier
-* allennlp frameworks
-
-
+   * [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/fasttext-supervised-model.ipynb)
+* allennlp + PyTorch frameworks
+ * model1
+ * [configuration](https://github.com/izzykayu/RxSpace/blob/master/nlp_configs/text_classification.json)
+ * To run the model training with this configuration:
+ ```bash
+ allennlp train nlp_configs/text_classification.json --serialization-dir saved-models/<your-model-dir> --include-package rx_twitterspace
+ ```
+ * Experiments ran so far include using exactly what is in nlp_configs/text_classification.json, where I have the data preprocessed in [noteboooks](https://github.com/izzykayu/RxSpace/blob/master/notebooks/preprocessing-jsonl.ipynb) in a directory called `data-classification-jsonl` and using the validation metric of best average F1 across all classes
+ ```bash
+ allennlp train nlp_configs/text_classification.json --serialization-dir saved-models/model1 --include-package rx_twitterspace
+ ```
+ * end std logging of training:
+ ```bash
+ 2020-03-25 06:51:35,274 - INFO - allennlp.models.archival - archiving weights and vocabulary to saved-models/model1/model.tar.gz
+2020-03-25 06:51:55,764 - INFO - allennlp.common.util - Metrics:
+```
+```json {
+  "best_epoch": 8,
+  "peak_cpu_memory_MB": 1759.670272,
+  "training_duration": "4:16:26.044395",
+  "training_start_epoch": 0,
+  "training_epochs": 17,
+  "epoch": 17,
+  "training_m_P": 0.9747639894485474,
+  "training_m_R": 0.9783163070678711,
+  "training_m_F1": 0.9765369296073914,
+  "training_c_P": 0.9627350568771362,
+  "training_c_R": 0.9578231573104858,
+  "training_c_F1": 0.9602728486061096,
+  "training_a_P": 0.923259973526001,
+  "training_a_R": 0.9210682511329651,
+  "training_a_F1": 0.9221628308296204,
+  "training_u_P": 0.9810874462127686,
+  "training_u_R": 0.9787735939025879,
+  "training_u_F1": 0.9799291491508484,
+  "training_average_F1": 0.9597254395484924,
+  "training_accuracy": 0.9634620859827275,
+  "training_loss": 0.10317539691212446,
+  "training_cpu_memory_MB": 1759.670272,
+  "validation_m_P": 0.8063355088233948,
+  "validation_m_R": 0.8277900815010071,
+  "validation_m_F1": 0.8169219493865967,
+  "validation_c_P": 0.7048114538192749,
+  "validation_c_R": 0.7424657344818115,
+  "validation_c_F1": 0.7231488227844238,
+  "validation_a_P": 0.5392670035362244,
+  "validation_a_R": 0.4598214328289032,
+  "validation_a_F1": 0.4963855445384979,
+  "validation_u_P": 0.8315789699554443,
+  "validation_u_R": 0.7596153616905212,
+  "validation_u_F1": 0.7939698100090027,
+  "validation_average_F1": 0.7076065316796303,
+  "validation_accuracy": 0.7388994307400379,
+  "validation_loss": 1.2185947988406722,
+  "best_validation_m_P": 0.8156182169914246,
+  "best_validation_m_R": 0.8337028622627258,
+  "best_validation_m_F1": 0.8245614171028137,
+  "best_validation_c_P": 0.6991150379180908,
+  "best_validation_c_R": 0.7575342655181885,
+  "best_validation_c_F1": 0.7271531820297241,
+  "best_validation_a_P": 0.5498652458190918,
+  "best_validation_a_R": 0.4553571343421936,
+  "best_validation_a_F1": 0.49816855788230896,
+  "best_validation_u_P": 0.8666666746139526,
+  "best_validation_u_R": 0.75,
+  "best_validation_u_F1": 0.8041236996650696,
+  "best_validation_average_F1": 0.7135017141699791,
+  "best_validation_accuracy": 0.7449715370018976,
+  "best_validation_loss": 0.8092704885695354,
+  "test_m_P": 0.8156182169914246,
+  "test_m_R": 0.8337028622627258,
+  "test_m_F1": 0.8245614171028137,
+  "test_c_P": 0.6991150379180908,
+  "test_c_R": 0.7575342655181885,
+  "test_c_F1": 0.7271531820297241,
+  "test_a_P": 0.5498652458190918,
+  "test_a_R": 0.4553571343421936,
+  "test_a_F1": 0.49816855788230896,
+  "test_u_P": 0.8666666746139526,
+  "test_u_R": 0.75,
+  "test_u_F1": 0.8041236996650696,
+  "test_average_F1": 0.7135017141699791,
+  "test_accuracy": 0.7449715370018976,
+  "test_loss": 0.8023609224572239
+}
+ ```
 
 
 ## Evaluation
+### Embeddings
+* We evaluate embeddings according to 
+
 
 ### Text classification
 * Run `python eval-official.py` to see the evaluation on predictions made from our fasttext baseline model which preprocessed text using ekphrasis
@@ -199,19 +334,14 @@ Out of the box with fasttext.train_supervised(tweets.train)
     accuracy                           0.71      2635
    macro avg       0.71      0.60      0.63      2635
 weighted avg       0.70      0.71      0.69      2635
-
-
-
-```
-#converting glove twitter vectors
-
-```bash
-python -m gensim.scripts.glove2word2vec --input "/Users/isabelmetzger/PycharmProjects/glove-twitter/glove.twitter.27B.100d.txt" --output glove.twitter.27B.100d.w2v.txt
-gzip glove.twitter.27B.100d.w2v.txt
-python -m spacy init-model en twitter-glove --vectors-loc glove.twitter.27B.100d.w2v.txt.gz
-
 ```
 
+## Future Work
+* Efficiently incorporating more sources:  
+    * DrugBank
+    * UMLS
+* Creating more labeling fxns
 
 ## Tags
 * data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability
+
