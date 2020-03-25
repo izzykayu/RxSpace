@@ -4,15 +4,17 @@
 ## Table of Contents
 * [Competition Details](#competition-details)
 * [Team Members](#team)
+* [Our Approach](#our-approach)
 * [Text Corpora](#text-corpora)
 * [Requirements](#requirements)
+* [Repo Setup](#repo-setup)
 * [Word Embeddings](#embeddings)
 * [Snorkel](#snorkel)
 * [Model Training](#model-training)
 * [Evaluation](#evaluation)
 * [References](#references)
-* [Acknowledgments](#acknowledgments)
 * [Tags](#tags)
+
 
 ## Competition Details
 *This repository contains code for tackling Task 4 of the SMM2020 
@@ -46,6 +48,9 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * Natasha Zaliznyak - nzaliznyak@gmail.com
 * Whitley Yi - wmcadenhead@gmail.com <br>
 
+## Our Approach
+* 
+
 ## Text Corpora
 ### Supervised Learning
 * Original train/validation split:
@@ -53,19 +58,6 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
     train size = 10537 samples
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -100,19 +92,6 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 </div>
     validation/dev: 2635 samples
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -180,9 +159,12 @@ tar -xvf scibert_scivocab_uncased.tar
 * preds
 * data-orig
 * docs
+* saved-models
 ```
 
-
+## Model Training
+* baseline fastText supervised classifier
+* allennlp frameworks
 
 
 
@@ -190,8 +172,22 @@ tar -xvf scibert_scivocab_uncased.tar
 ## Evaluation
 
 ### Text classification
-* fasttext model `python evaluation.py`
+* Run `python eval-official.py` to see the evaluation on predictions made from our fasttext baseline model which preprocessed text using ekphrasis
+
 ```
+              precision    recall  f1-score   support
+
+           a       0.55      0.35      0.43       448
+           c       0.67      0.69      0.68       730
+           m       0.76      0.85      0.80      1353
+           u       0.87      0.68      0.76       104
+
+    accuracy                           0.72      2635
+   macro avg       0.71      0.64      0.67      2635
+weighted avg       0.70      0.72      0.70      2635
+```
+Out of the box with fasttext.train_supervised(tweets.train)
+```bash
 
               precision    recall  f1-score   support
 
@@ -205,17 +201,6 @@ tar -xvf scibert_scivocab_uncased.tar
 weighted avg       0.70      0.71      0.69      2635
 
 
-              precision    recall  f1-score   support
-
-           a       0.19      0.08      0.11       448
-           c       0.28      0.23      0.25       730
-           m       0.52      0.69      0.59      1353
-           u       0.08      0.02      0.03       104
-
-    accuracy                           0.43      2635
-   macro avg       0.27      0.26      0.25      2635
-weighted avg       0.38      0.43      0.39      2635
-
 
 ```
 #converting glove twitter vectors
@@ -226,5 +211,7 @@ gzip glove.twitter.27B.100d.w2v.txt
 python -m spacy init-model en twitter-glove --vectors-loc glove.twitter.27B.100d.w2v.txt.gz
 
 ```
+
+
 ## Tags
 * data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability
