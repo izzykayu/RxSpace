@@ -1,19 +1,20 @@
-## SM4H - Team **RxSpace**!
+## SM4H - Team **RxSpace** :star: !
 
 
 ## Table of Contents
 * [Competition Details](#competition-details)
-* [Team Members](#team)
-* [Our Approach](#our-approach)
-* [Text Corpora](#text-corpora)
+* [Team Members](#team) :sparkles: :sparkles: :email:
+* [Our Approach](#our-approach) :bookmark:
 * [Requirements](#requirements)
 * [Repo Layout](#repo-layout)
-* [Word Embeddings](#embeddings)
+* [Text Corpora](#text-corpora) :books: 
+* [Embeddings](#embeddings)
 * [Snorkel](#snorkel)
 * [Model Training](#model-training)
-* [Evaluation](#evaluation)
+* [Evaluation](#evaluation) :chart_with_upwards_trend:
 * [References](#references)
-* [Tags](#tags)
+* [Tags](#tags) 
+* [Future Work](#future-work) :crystal_ball:	
 
 
 ## Competition Details
@@ -49,8 +50,68 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * Whitley Yi - wmcadenhead@gmail.com <br>
 
 ## Our Approach
-* *Our approach can be broken up into 3 main sections: preprocessing, model architecture, and voting*
-* 
+* *Our approach can be broken up into 3 main sections: preprocessing, model architectures, and Ensemble*
+* Pre-processing:
+    *tokenization + using pre-trained embeddings/ creating our own pre-trained word representations*
+* Word Embeddings:
+   * Glove (Pennington et al., 2014) , Word2Vec (Mikolov et al., 2013), fasText (Bojanowski et al., 2016):
+        * params:
+            * dim: 50, 100, 200, 300
+
+                    
+    * Language Model: Elmo (Perters et al., 2018), Bert , sciBert:
+       * params: default
+  * Model Architectures:
+     * fasttext baseline
+     * allennlp scibert text classifier
+     * cnn text classifiers
+     
+     * train multiple models based on different training-set/val-set, different embeddings, different features, and even totally different architectures
+ * we also train with different data-splits
+ * *for all splits not using the originally provided train and dev set, we stratify by class
+ e.g., 
+ * Data split 1:
+    * *utilizing split provided from SMM4H*
+    * Train: orig train.csv (N = 10,537)
+    * Dev: orig validation.csv (N =2,636)
+ * Data split 2:
+   * using an 70% | 30% split
+   * Train:
+   * Dev: 
+  * Data split 3:
+  * using a holdout from the dev set for 15%
+  * Train: 65%
+  * Dev:  20%
+  * Hold-out:  15%, 
+       * *Hold-out is used to tune the thresholds*
+  * Voting:
+  * Models trined on different splits with weights according to dev set
+  * baseline threshold = 0.5
+  * fine-tune threshold according to the hold-out set
+
+
+## Requirements
+* Important packages/frameworks utilized include [spacy](https://github.com/explosion/spaCy), [fastText](https://github.com/facebookresearch/fastText), [ekphrasis](https://github.com/cbaziotis/ekphrasis), [allennlp](https://github.com/allenai/allennlp), [PyTorch](https://github.com/pytorch/pytorch), [snorkel](https://github.com/snorkel-team/snorkel/)
+* To use the allennlp configs (nlp_cofigs/text_classification.json) with pre-trained scibert , which were downloaded with commands below
+```bash
+wget https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/pytorch_models/scibert_scivocab_uncased.tar
+tar -xvf scibert_scivocab_uncased.tar
+```
+* Exact requirements can be found in the requirements.txt file
+* For specific processed done in jupyter notebooks, please find the packages listed in the beginning cells of each notebook
+
+
+## Repo Layout
+```
+* notebooks - jupyter notebooks including notebooks that contain important steps including embedding preprocessing, preprocessing for our allennlp models, snorkel labeling fxns and evaluation/exploratory analysis, and our baseline fasttext model (preprocessing, training, and saving): process-emb.ipynb, preprocessing-jsonl.ipynb, snorkel.ipynb, fasttext-supervised-model.ipynb
+* rx_twitterspace - allennlp library with our dataset loaders, predictors, and models
+* nlp_configs - allennlp model experiment configurations
+* preds - directory with predictions
+* data-orig - directory with original raw data as provided from the SMM4H official task
+* docs - more documentation (md and html files)
+* saved-models - directory where saved models are
+* preproc - bash scripts with import setup and pre-processing bash scripts such as converting fasttext embeddings for spacy and for compiling fasttext library
+```
 
 ## Text Corpora
 ### Supervised Learning
@@ -139,35 +200,13 @@ We created word embeddings using health social media posts from twitter and othe
 |  Wikipedia |  |  | 
 | | | |
 
-## Requirements
-* Important packages/frameworks utilized include [spacy](https://github.com/explosion/spaCy), [fastText](https://github.com/facebookresearch/fastText), [ekphrasis](https://github.com/cbaziotis/ekphrasis), [allennlp](https://github.com/allenai/allennlp), [PyTorch](https://github.com/pytorch/pytorch), [snorkel](https://github.com/snorkel-team/snorkel/)
-* To use the allennlp configs (nlp_cofigs/text_classification.json) with pre-trained scibert embeddings, which were downloaded as below 
-```bash
-wget https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/pytorch_models/scibert_scivocab_uncased.tar
-tar -xvf scibert_scivocab_uncased.tar
-```
-* Exact requirements can be found in the requirements.txt file
-* For specific processed done in jupyter notebooks, please find the packages listed in the beginning cells of each notebook
-
-
-## Repo Layout
-```
-* notebooks - jupyter notebooks including notebooks that contain important steps including embedding preprocessing, preprocessing for our allennlp models, snorkel labeling fxns and evaluation/exploratory analysis, and our baseline fasttext model (preprocessing, training, and saving): process-emb.ipynb, preprocessing-jsonl.ipynb, snorkel.ipynb, fasttext-supervised-model.ipynb
-* rx_twitterspace - allennlp library with our dataset loaders, predictors, and models
-* nlp_configs - allennlp model experiment configurations
-* preds - directory with predictions
-* data-orig - directory with original raw data as provided from the SMM4H official task
-* docs - more documentation (md and html files)
-* saved-models - directory where saved models are
-* preproc - bash scripts with import setup and pre-processing bash scripts such as converting fasttext embeddings for spacy and for compiling fasttext library
-```
 ## Embeddings
 
 ## Snorkel
-### Labeling Fxns
+### Labeling Functions
 * We used the snorkel framework for two major tasks: labeling Fxns and data augmentation
 * labeling function creation [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/snorkel.ipynb)
-# TODO: add link
+# TODO: add link for data augmentation
 * data augmentation [notebook]()
 
 
@@ -263,6 +302,9 @@ tar -xvf scibert_scivocab_uncased.tar
 
 
 ## Evaluation
+### Embeddings
+* We evaluate embeddings according to 
+
 
 ### Text classification
 * Run `python eval-official.py` to see the evaluation on predictions made from our fasttext baseline model which preprocessed text using ekphrasis
@@ -292,19 +334,14 @@ Out of the box with fasttext.train_supervised(tweets.train)
     accuracy                           0.71      2635
    macro avg       0.71      0.60      0.63      2635
 weighted avg       0.70      0.71      0.69      2635
-
-
-
-```
-#converting glove twitter vectors
-
-```bash
-python -m gensim.scripts.glove2word2vec --input "/Users/isabelmetzger/PycharmProjects/glove-twitter/glove.twitter.27B.100d.txt" --output glove.twitter.27B.100d.w2v.txt
-gzip glove.twitter.27B.100d.w2v.txt
-python -m spacy init-model en twitter-glove --vectors-loc glove.twitter.27B.100d.w2v.txt.gz
-
 ```
 
+## Future Work
+* Efficiently incorporating more sources:  
+    * DrugBank
+    * UMLS
+* Creating more labeling fxns
 
 ## Tags
 * data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability
+
