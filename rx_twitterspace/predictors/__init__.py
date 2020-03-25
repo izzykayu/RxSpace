@@ -1,1 +1,3 @@
-from rx_twitterspace.predictors.predictor import SentenceClassifierPredictor
+from rx_twitterspace.predictors.paper_classifier_predictor import PaperClassifierPredictor
+from rx_twitterspace.predictors.predictor import SentenceClassifierPredictor, UniversalPOSPredictor
+from rx_twitterspace.predictors.tweet_classifier_predictor import TweetClassifierPredictor
