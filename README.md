@@ -7,7 +7,7 @@
 * [Our Approach](#our-approach)
 * [Text Corpora](#text-corpora)
 * [Requirements](#requirements)
-* [Repo Setup](#repo-setup)
+* [Repo Layout](#repo-layout)
 * [Word Embeddings](#embeddings)
 * [Snorkel](#snorkel)
 * [Model Training](#model-training)
@@ -49,6 +49,7 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * Whitley Yi - wmcadenhead@gmail.com <br>
 
 ## Our Approach
+* *Our approach can be broken up into 3 main sections: preprocessing, model architecture, and voting*
 * 
 
 ## Text Corpora
@@ -56,7 +57,6 @@ System predictions for test data due: April 5, 2020 (23:59 CodaLab server time) 
 * Original train/validation split:
    * We use the train.csv, validation.csv as provided from our competition
     train size = 10537 samples
-
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -149,24 +149,117 @@ tar -xvf scibert_scivocab_uncased.tar
 * Exact requirements can be found in the requirements.txt file
 * For specific processed done in jupyter notebooks, please find the packages listed in the beginning cells of each notebook
 
-## Embeddings
-
 
 ## Repo Layout
 ```
-* rx_twitterspace
-* nlp_configs
-* preds
-* data-orig
-* docs
-* saved-models
+* notebooks - jupyter notebooks including notebooks that contain important steps including embedding preprocessing, preprocessing for our allennlp models, snorkel labeling fxns and evaluation/exploratory analysis, and our baseline fasttext model (preprocessing, training, and saving): process-emb.ipynb, preprocessing-jsonl.ipynb, snorkel.ipynb, fasttext-supervised-model.ipynb
+* rx_twitterspace - allennlp library with our dataset loaders, predictors, and models
+* nlp_configs - allennlp model experiment configurations
+* preds - directory with predictions
+* data-orig - directory with original raw data as provided from the SMM4H official task
+* docs - more documentation (md and html files)
+* saved-models - directory where saved models are
+* preproc - bash scripts with import setup and pre-processing bash scripts such as converting fasttext embeddings for spacy and for compiling fasttext library
 ```
+## Embeddings
+
+## Snorkel
+### Labeling Fxns
+* We used the snorkel framework for two major tasks: labeling Fxns and data augmentation
+* labeling function creation [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/snorkel.ipynb)
+# TODO: add link
+* data augmentation [notebook]()
+
 
 ## Model Training
 * baseline fastText supervised classifier
-* allennlp frameworks
-
-
+   * [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/fasttext-supervised-model.ipynb)
+* allennlp + PyTorch frameworks
+ * model1
+ * [configuration](https://github.com/izzykayu/RxSpace/blob/master/nlp_configs/text_classification.json)
+ * To run the model training with this configuration:
+ ```bash
+ allennlp train nlp_configs/text_classification.json --serialization-dir saved-models/<your-model-dir> --include-package rx_twitterspace
+ ```
+ * Experiments ran so far include using exactly what is in nlp_configs/text_classification.json, where I have the data preprocessed in [noteboooks](https://github.com/izzykayu/RxSpace/blob/master/notebooks/preprocessing-jsonl.ipynb) in a directory called `data-classification-jsonl` and using the validation metric of best average F1 across all classes
+ ```bash
+ allennlp train nlp_configs/text_classification.json --serialization-dir saved-models/model1 --include-package rx_twitterspace
+ ```
+ * end std logging of training:
+ ```bash
+ 2020-03-25 06:51:35,274 - INFO - allennlp.models.archival - archiving weights and vocabulary to saved-models/model1/model.tar.gz
+2020-03-25 06:51:55,764 - INFO - allennlp.common.util - Metrics:
+```
+```json {
+  "best_epoch": 8,
+  "peak_cpu_memory_MB": 1759.670272,
+  "training_duration": "4:16:26.044395",
+  "training_start_epoch": 0,
+  "training_epochs": 17,
+  "epoch": 17,
+  "training_m_P": 0.9747639894485474,
+  "training_m_R": 0.9783163070678711,
+  "training_m_F1": 0.9765369296073914,
+  "training_c_P": 0.9627350568771362,
+  "training_c_R": 0.9578231573104858,
+  "training_c_F1": 0.9602728486061096,
+  "training_a_P": 0.923259973526001,
+  "training_a_R": 0.9210682511329651,
+  "training_a_F1": 0.9221628308296204,
+  "training_u_P": 0.9810874462127686,
+  "training_u_R": 0.9787735939025879,
+  "training_u_F1": 0.9799291491508484,
+  "training_average_F1": 0.9597254395484924,
+  "training_accuracy": 0.9634620859827275,
+  "training_loss": 0.10317539691212446,
+  "training_cpu_memory_MB": 1759.670272,
+  "validation_m_P": 0.8063355088233948,
+  "validation_m_R": 0.8277900815010071,
+  "validation_m_F1": 0.8169219493865967,
+  "validation_c_P": 0.7048114538192749,
+  "validation_c_R": 0.7424657344818115,
+  "validation_c_F1": 0.7231488227844238,
+  "validation_a_P": 0.5392670035362244,
+  "validation_a_R": 0.4598214328289032,
+  "validation_a_F1": 0.4963855445384979,
+  "validation_u_P": 0.8315789699554443,
+  "validation_u_R": 0.7596153616905212,
+  "validation_u_F1": 0.7939698100090027,
+  "validation_average_F1": 0.7076065316796303,
+  "validation_accuracy": 0.7388994307400379,
+  "validation_loss": 1.2185947988406722,
+  "best_validation_m_P": 0.8156182169914246,
+  "best_validation_m_R": 0.8337028622627258,
+  "best_validation_m_F1": 0.8245614171028137,
+  "best_validation_c_P": 0.6991150379180908,
+  "best_validation_c_R": 0.7575342655181885,
+  "best_validation_c_F1": 0.7271531820297241,
+  "best_validation_a_P": 0.5498652458190918,
+  "best_validation_a_R": 0.4553571343421936,
+  "best_validation_a_F1": 0.49816855788230896,
+  "best_validation_u_P": 0.8666666746139526,
+  "best_validation_u_R": 0.75,
+  "best_validation_u_F1": 0.8041236996650696,
+  "best_validation_average_F1": 0.7135017141699791,
+  "best_validation_accuracy": 0.7449715370018976,
+  "best_validation_loss": 0.8092704885695354,
+  "test_m_P": 0.8156182169914246,
+  "test_m_R": 0.8337028622627258,
+  "test_m_F1": 0.8245614171028137,
+  "test_c_P": 0.6991150379180908,
+  "test_c_R": 0.7575342655181885,
+  "test_c_F1": 0.7271531820297241,
+  "test_a_P": 0.5498652458190918,
+  "test_a_R": 0.4553571343421936,
+  "test_a_F1": 0.49816855788230896,
+  "test_u_P": 0.8666666746139526,
+  "test_u_R": 0.75,
+  "test_u_F1": 0.8041236996650696,
+  "test_average_F1": 0.7135017141699791,
+  "test_accuracy": 0.7449715370018976,
+  "test_loss": 0.8023609224572239
+}
+ ```
 
 
 ## Evaluation
