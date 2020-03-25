@@ -11,30 +11,31 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Reading Materials and Books
-    * [Goldberg. Neural Network Methods for Natural Language Processing. 2017.] (http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037)
-    * [Jurafsky and Martin. Speech and Language Processing, 2nd edition. 2009.](http://dl.acm.org/citation.cfm?id=1214993)
-    * [Goodfellow, Courville and Bengio. Deep Learning. 2016.](http://www.iro.umontreal.ca/~bengioy/dlbook/)
-    * [Manning and Schütze. Foundations of Statistical Natural Language Processing. 1999.](http://nlp.stanford.edu/fsnlp/)
-    * [Bender. Linguistic Fundamentals for Natural Language Processing. 2013.](http://www.morganclaypool.com/doi/abs/10.2200/S00493ED1V01Y201303HLT020)
-    * [Cho. Foundations and Advances in Deep Learning. Ph.D. Thesis. 2014.
+* [Goldberg. Neural Network Methods for Natural Language Processing. 2017.] (http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037)
+* [Jurafsky and Martin. Speech and Language Processing, 2nd edition. 2009.](http://dl.acm.org/citation.cfm?id=1214993)
+* [Goodfellow, Courville and Bengio. Deep Learning. 2016.](http://www.iro.umontreal.ca/~bengioy/dlbook/)
+* [Manning and Schütze. Foundations of Statistical Natural Language Processing. 1999.](http://nlp.stanford.edu/fsnlp/)
+* [Bender. Linguistic
+Fundamentals for Natural Language Processing. 2013.](http://www.morganclaypool.com/doi/abs/10.2200/S00493ED1V01Y201303HLT020)
+* [Cho. Foundations and Advances in Deep Learning. Ph.D. Thesis. 2014.
  ](https://aaltodoc.aalto.fi/handle/123456789/12729)
  
 ## Word Embeddings
-    * [Ch. 10-11 of Goldberg]()
-    * [fasttext implementation code](https://github.com/facebookresearch/fastText)
-    * [fasttext paper - Enriching Word Vectors with Subword Information - mIkolov et al](https://arxiv.org/abs/1607.04606)
-    * [good blog post baout fasttext](https://towardsdatascience.com/fasttext-under-the-hood-11efc57b2b3)
-    * [word2vec paper- Efficient Estimation of Word Representations in Vector Space by Mikolov et al](https://arxiv.org/pdf/1301.3781.pdf)
-     * [word2vec paper - Distributed Representations of words and phrases and their Compositionality by Mikolov et al.](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
-     * [word2vec code implementation](https://code.google.com/archive/p/word2vec/)
-     * [word 2 vec explainer blog](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
+* [Ch. 10-11 of Goldberg]()
+* [fasttext implementation code](https://github.com/facebookresearch/fastText)
+* [fasttext paper - Enriching Word Vectors with Subword Information - mIkolov et al](https://arxiv.org/abs/1607.04606)
+* [good blog post baout fasttext](https://towardsdatascience.com/fasttext-under-the-hood-11efc57b2b3)
+* [word2vec paper- Efficient Estimation of Word Representations in Vector Space by Mikolov et al](https://arxiv.org/pdf/1301.3781.pdf)
+* [word2vec paper - Distributed Representations of words and phrases and their Compositionality by Mikolov et al.](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+* [word2vec code implementation](https://code.google.com/archive/p/word2vec/)
+* [word 2 vec explainer blog](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
     * [Natural Language Processing (almost) from Scratch by Collobert et al.](http://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)
     * [From Frequency to Meaning: Vector Space Models of Semantics](http://www.jair.org/media/2934/live-2934-4846-jair.pdf)
     * [GloVe: Global Vectors for Word Representation](http://www.aclweb.org/anthology/D14-1162)
     * [glove explainer blog](https://blog.acolyer.org/2016/04/22/glove-global-vectors-for-word-representation/)
 
 ## Language Modeling
-    * [Ch. 9, Goldberg]()
+* [Ch. 9, Goldberg]()
     * [A neural probabilistic language model by Bengio et al.]()
     * [N-Grams by Jurafsky and Martin]()
     * [RNN based language model by Mikolov]()
@@ -59,8 +60,8 @@
 - [Skip Thought Vectors by Keros et al.](https://arxiv.org/abs/1506.06726) - word representation method
 - [Adaptive skip-gram](https://arxiv.org/abs/1502.07257) - similar approach, with adaptive properties
 - [Sequence to Sequence Learning](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf) 
-    * [SNLI - Bowman et al. 2015](http://nlp.stanford.edu/pubs/snli_paper.pdf)
-    * [Conneau et al. 2017]()
+ - [SNLI - Bowman et al. 2015](http://nlp.stanford.edu/pubs/snli_paper.pdf)
+ - [Conneau et al. 2017]()
 
     
 ## Larger-context natural language understanding
