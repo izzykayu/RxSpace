@@ -214,11 +214,14 @@ We created word embeddings using health social media posts from twitter and othe
 
 ## Model Training
 * baseline fastText supervised classifier
+    * model-bin
    * [Notebook](https://github.com/izzykayu/RxSpace/blob/master/notebooks/fasttext-supervised-model.ipynb)
 * allennlp + PyTorch frameworks
  * model1
  * [configuration](https://github.com/izzykayu/RxSpace/blob/master/nlp_configs/text_classification.json)
  * To run the model training with this configuration:
+* spacy model
+
  ```bash
  allennlp train nlp_configs/text_classification.json --serialization-dir saved-models/<your-model-dir> --include-package rx_twitterspace
  ```
@@ -305,7 +308,7 @@ We created word embeddings using health social media posts from twitter and othe
 
 ## Evaluation
 ### Embeddings
-* We evaluate embeddings according to 
+* Analogy & similarity
 
 
 ### Text classification
@@ -347,5 +350,5 @@ weighted avg       0.70      0.71      0.69      2635
 
 
 ## Tags
-* data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability
+* data augmentation, weak supervision, noisy labeling, word embeddings, text classification, multi-label, multi-class, scalability, ensemble
 
