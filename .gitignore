@@ -130,3 +130,6 @@ dmypy.json
 
 fastText-0.9.1
 data-orig/*.csv
+*.gz
+*.jsonl
+data-fasttext/
