@@ -134,3 +134,7 @@ data-orig/*.csv
 *.jsonl
 data-fasttext/
 docs/*.zip
+tweets
+prodigy-1.9.5-cp36.cp37.cp38-cp36m.cp37m.cp38-macosx_10_13_x86_64.whl
+prodigy-1.9.5.zip
+weights

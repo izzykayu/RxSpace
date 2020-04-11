@@ -1,21 +1,21 @@
 {
-  "random_seed": std.parseInt(std.extVar("SEED")),
-  "pytorch_seed": std.parseInt(std.extVar("PYTORCH_SEED")),
-  "numpy_seed": std.parseInt(std.extVar("NUMPY_SEED")),
+  "random_seed": 13,
+  "pytorch_seed": 126,
+  "numpy_seed": 126,
   "dataset_reader": {
     "type": "classification_dataset_reader",
      "token_indexers": {
       "bert": {
           "type": "bert-pretrained",
-          "pretrained_model": std.extVar("BERT_VOCAB"),
-          "do_lowercase": std.extVar("IS_LOWERCASE"),
+          "pretrained_model": "scibert_scivocab_uncased/vocab.txt",
+          "do_lowercase": false,
           "use_starting_offsets": true
       }
     }
   },
-  "train_data_path": "",
-  "validation_data_path": std.extVar("DEV_PATH"),
-  "test_data_path": std.extVar("TEST_PATH"),
+  "train_data_path": "data-jsonl/train.jsonl",
+  "validation_data_path": "data-jsonl/validation.jsonl",
+  "test_data_path": "data-jsonl/validation.jsonl",
   "evaluate_on_test": true,
   "model": {
     "type": "bert_text_classifier",
@@ -28,8 +28,8 @@
         "token_embedders": {
             "bert": {
                 "type": "bert-pretrained",
-                "pretrained_model": std.extVar("BERT_WEIGHTS"),
-                "requires_grad": 'all',
+                "pretrained_model":  "scibert_scivocab_uncased/weights.tar.gz",
+                "requires_grad": true,
                 "top_layer_only": true
             }
         }
@@ -49,16 +49,15 @@
           [["bias", "LayerNorm.bias", "LayerNorm.weight", "layer_norm.weight"], {"weight_decay": 0.0}]
         ]
     },
-    "validation_metric": "+average_F1",
+    "validation_metric": "+ABUSE_F1",
     "num_serialized_models_to_keep": 3,
     "num_epochs":70,
     "should_log_learning_rate": true,
     "learning_rate_scheduler": {
       "type": "slanted_triangular",
       "num_epochs": 70,
-      "num_steps_per_epoch": std.parseInt(std.extVar("DATASET_SIZE")) / std.parseInt(std.extVar("GRAD_ACCUM_BATCH_SIZE"))
+      "num_steps_per_epoch": 414.6875
     },
-    "gradient_accumulation_batch_size": 32,
-    "cuda_device": 0
+    "cuda_device": -1
   }
 }

@@ -1,7 +1,7 @@
 """
 Usage: eval-official.py <gt_pth> <pred_pth>
 takes in the ground truth (e.g., tweetid, class)
-usage: eval-official.py [-h] [gt_pth] [pred_pth] [truth_label] [pred_label]
+usage: eval-official.py [qs-adderral_lang-en_until-2020-02-02.csv] [gt_pth] [pred_pth] [truth_label] [pred_label]
 
 positional arguments:
   gt_pth       [data-orig/validation.csv]
@@ -10,7 +10,7 @@ positional arguments:
   pred_label   [Class]
 
 optional arguments:
-  -h, --help   show this help message and exit
+  qs-adderral_lang-en_until-2020-02-02.csv, --help   show this help message and exit
 
 """
 import sklearn.metrics as sklm
