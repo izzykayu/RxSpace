@@ -59,7 +59,7 @@
         "type": "bert_adam",
         "lr": 0.001
     },
-    "validation_metric": "+average_F1",
+    "validation_metric": "+a_F1",
     "num_serialized_models_to_keep": 3,
     "num_epochs": 70,
     "patience": 10,

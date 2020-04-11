@@ -32,7 +32,7 @@ import jsonlines
     n_iter=("Number of training iterations", "option", "n", int),
     init_tok2vec=("Pretrained tok2vec weights", "option", "t2v", Path),
 )
-def main(input_dir="data-spacy-pytorch-jsonl", labels="ABUSE,CONSUMPTION,MENTION,UNRELATED", model=None, output_dir=None, n_iter=20, n_texts=10537, init_tok2vec=None):
+def main(input_dir="data-jsonl", labels="ABUSE,CONSUMPTION,MENTION,UNRELATED", model=None, output_dir=None, n_iter=20, n_texts=10537, init_tok2vec=None):
     if output_dir is not None:
         output_dir = Path(output_dir)
         if not output_dir.exists():

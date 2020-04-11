@@ -1,0 +1,296 @@
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lisdexamfetamine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "duoneb"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "142153", "name": "Albuterol Sulfate", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D001250", "className": "Asthma, Exercise-Induced", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "142153", "name": "Albuterol Sulfate", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D001986", "className": "Bronchial Spasm", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "435", "name": "Albuterol", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D001250", "className": "Asthma, Exercise-Induced", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "435", "name": "Albuterol", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D001986", "className": "Bronchial Spasm", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zydol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "poxi"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dialar"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hy-phen"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "chlordinium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "librium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "gen-xene"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "doral"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hycet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "combunox"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "versacloz"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "opana"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "estazolam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vraylar"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zyprexa"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "panacet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zenzedi"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "nuvigil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "butorphic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zomorph"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dexedrine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "quillivant"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zetran"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lorazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clobazam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "atrovent"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "onfi"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zolvit"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dolacet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "valicot"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "diazemuls"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vendone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "duramorph"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ritalin-sr"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "procentra"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "diazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "remifentanil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "librax"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "trezix"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "butorphanol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tuzistra"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dexmethylphenidate"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "acetaminophen"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "concerta"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxaydo"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxecta"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tropicamide"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxycontin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "physeptone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "brompheniramine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydrocodone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vyvanse"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "l-dromoran"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "chlorpheniramine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "levorphanol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "xylon"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "5640", "name": "Ibuprofen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tramalgin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "fanapt"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxyrapid"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clozapine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "seroquel"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "evekeo"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "codrix"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "glydeine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxyfast"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "chlordiazepoxide"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "talacen"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "taxadone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "rimapam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clonazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tensium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "rivotril"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "cheratussin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "allay"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "xanax"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydromide"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tylagesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "sublimaze"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "sufentanil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "demerol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "eth-oxydose"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "anexsia"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "rexulti"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aller-tec"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tylox"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "buprenorphine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ziprasidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "brontex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "endocodone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "fentora"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "m-oxy"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "symbyax"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "guaifenesin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aristada"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tussionex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "roxicodone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "depodur"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "adderall-xr"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "duocet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "calprazolam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "m-eslon"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "mydayis"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ipratropium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "msir"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "pentazocine"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "104973", "name": "Pentazocine Hydrochloride", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "203196", "name": "Pentazocine Lactate", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "8001", "name": "Pentazocine", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "temazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tramadol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "magnacet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "prosom"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ultiva"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lorcet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ionsys"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "alprazolam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "valpax"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "saphris"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "actiq"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "torbugesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tylenol"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "codafen"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "reprexain"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "5640", "name": "Ibuprofen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "perloxx"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "invega"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "brexpiprazole"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "stadol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydrotropine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "restoril"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "niravam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "p-hydroxyamphetamine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dextrostat"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methylin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "procet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "pyregesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "modafinil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "asenapine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "synalgos-dc"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002544", "className": "Cerebral Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002546", "className": "Ischemic Attack, Transient", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D011225", "className": "Pre-Eclampsia", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "guai-co"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "provigil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydropane"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "nubain"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "klonopin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "m-phen"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydrogesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "onsolis"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "roxilox"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "limbitrol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "butalbital"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methamphetamine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zamicet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vicoprofen"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "5640", "name": "Ibuprofen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oramorph"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dihydrocodeine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aceon"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "54552", "name": "Perindopril", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D003928", "className": "Diabetic Nephropathies", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "54552", "name": "Perindopril", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "54552", "name": "Perindopril", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D017379", "className": "Hypertrophy, Left Ventricular", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "54552", "name": "Perindopril", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D018487", "className": "Ventricular Dysfunction, Left", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "72260", "name": "Perindopril Erbumine", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D003928", "className": "Diabetic Nephropathies", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "72260", "name": "Perindopril Erbumine", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "72260", "name": "Perindopril Erbumine", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D017379", "className": "Hypertrophy, Left Ventricular", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "72260", "name": "Perindopril Erbumine", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D018487", "className": "Ventricular Dysfunction, Left", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "liquadd"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "sufenta"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clorazepate"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "adderall"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "h-tran"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hycodan"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methylphenidate"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "pimavanserin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "suboxone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "buprenex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "roxicet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ibudone"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "5640", "name": "Ibuprofen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vanacet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tropium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "nuplazid"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dizac"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "libritabs"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ibuprofen"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "1429044", "name": "Ibuprofen, Sodium Salt", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "36761", "name": "ibuprofen lysine", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "5640", "name": "Ibuprofen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydromorphone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "astramorph"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydrostat"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clozaril"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "morphine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methadose"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "quetiapine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "evacalm"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "iloperidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "frisium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "geodon"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "durophet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "clindex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "amphetamine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tranxene"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "paliperidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "diastat"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydrocet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dolophine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "naloxone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "stesolid"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aspirin"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002544", "className": "Cerebral Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002546", "className": "Ischemic Attack, Transient", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D011225", "className": "Pre-Eclampsia", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "314293", "name": "ACETYLSALICYLATE SODIUM", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D002544", "className": "Cerebral Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "314293", "name": "ACETYLSALICYLATE SODIUM", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D002546", "className": "Ischemic Attack, Transient", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "314293", "name": "ACETYLSALICYLATE SODIUM", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "314293", "name": "ACETYLSALICYLATE SODIUM", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "314293", "name": "ACETYLSALICYLATE SODIUM", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D011225", "className": "Pre-Eclampsia", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "risperdal"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zydone"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "armodafinil"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "duragesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "endodan"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "co-gesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zyfrel"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "norco"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "doxapram"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "3637", "name": "Doxapram", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D012131", "className": "Respiratory Insufficiency", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "82011", "name": "Doxapram Hydrochloride", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D012131", "className": "Respiratory Insufficiency", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dopram"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "3637", "name": "Doxapram", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D012131", "className": "Respiratory Insufficiency", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "82011", "name": "Doxapram Hydrochloride", "tty": "PIN"}, "rxclassMinConceptItem": {"classId": "D012131", "className": "Respiratory Insufficiency", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "rms"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "alupram"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "rybix"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "serax"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "olanzapine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "mitran"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "abilify"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "latuda"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hyco-pap"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dazidox"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "risperidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "nalbuphine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lynox"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "kadian"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ryzolt"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dalmane"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "homatropine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lortab"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tussicaps"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "roxanol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxycodone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "phenco-care"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "halcion"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tramake"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "t-gesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hydromet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "cocet"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "flurazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ugesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aripiprazole"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "tussigon"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "almazine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "conzip"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "verdrocet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "primlev"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "subutex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ceberclon"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "phenylephrine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ativan"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "aptensio"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "carisoprodol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "panlor"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dolagesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "lurasidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dextroamphetamine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxydose"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxynorm"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "desoxyn"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "metadate"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "codeine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "d-val"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oxymorphone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "percodan"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ritalin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "vicodin"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ascomp"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002544", "className": "Cerebral Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D002546", "className": "Ischemic Attack, Transient", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D009203", "className": "Myocardial Infarction", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "1191", "name": "Aspirin", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D011225", "className": "Pre-Eclampsia", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "hycomed"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "triazolam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "morphabond"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "percolone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "sevredol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "pethilorfan"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "stagesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ultracet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "polygesic"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "quazepam"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "xodol"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "cariprazine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "fazaclo"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zerlor"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "respiram"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "paremyd"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "pseudoephedrine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "margesic-h"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "endocet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "percocet"}, "rxclassDrugInfoList": {"rxclassDrugInfo": [{"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D005334", "className": "Fever", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}, {"minConcept": {"rxcui": "161", "name": "Acetaminophen", "tty": "IN"}, "rxclassMinConceptItem": {"classId": "D010146", "className": "Pain", "classType": "DISEASE"}, "rela": "may_prevent", "relaSource": "MEDRT"}]}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methex"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "valium"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "focalin"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "meperidine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "atensine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "dilaudid"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "fentanyl"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "methadone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "zamadol"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "ultram"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "caffeine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "promethazine"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "maxidone"}}
+{"userInput": {"relaSource": "MEDRT", "relas": "may_prevent", "drugName": "oncet"}}
