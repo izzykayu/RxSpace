@@ -120,7 +120,7 @@ pyasn1==0.4.8
 pybind11==2.4.3
 pycparser==2.20
 pycryptodome==3.9.7
-Pygments==2.6.1
+Pygments==2.15.0
 pylint==2.4.4
 pyparsing==2.4.6
 pyrsistent==0.16.0
