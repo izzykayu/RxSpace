@@ -39,7 +39,7 @@ editdistance==0.5.3
 entrypoints==0.3
 flaky==3.6.1
 flashtext==2.7
-Flask==1.1.1
+Flask==2.2.5
 Flask-Cors==3.0.9
 ftfy==5.7
 future==0.18.2
