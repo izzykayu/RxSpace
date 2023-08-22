@@ -160,7 +160,7 @@ sphinxcontrib-htmlhelp==1.0.3
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
-sqlparse==0.3.1
+sqlparse==0.4.4
 srsly==1.0.2
 tangled-up-in-unicode==0.0.3
 tensorboardX==2.0
