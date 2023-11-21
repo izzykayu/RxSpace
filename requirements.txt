@@ -43,7 +43,7 @@ Flask==2.2.5
 Flask-Cors==3.0.9
 ftfy==5.7
 future==0.18.3
-gevent==1.4.0
+gevent==23.9.1
 greenlet==0.4.15
 h5py==2.10.0
 htmlmin==0.1.12
